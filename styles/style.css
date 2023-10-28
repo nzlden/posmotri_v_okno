@@ -89,19 +89,12 @@ ol {
 }
 
 .content__list-item {
-  margin: 30px 0;
+  margin-bottom: 30px;
 }
 
-.content__list-item:first-child {
-  margin-top: 0;
-}
 .content__list-item:last-child {
   margin-bottom: 0;
 }
-
-/* Так много кода в списке, потому что я подумал что нужно убрать отступ перед кнопкой
-показать еще, если так - то я не знаю как это сделать, я гуглил, перебирал варианты.
-А если у последнего элемента в дереве то все работает*/
 
 .content__video-card {
   display: flex;
@@ -144,6 +137,7 @@ ol {
 }
 
 .content__card-link {
+  color: #fff;
   display: block;
   text-decoration: none;
   margin: 2px;
@@ -159,6 +153,10 @@ ol {
   line-height: 100% /* 30px */;
   text-transform: uppercase;
   padding-bottom: 4px;
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -168,6 +166,10 @@ ol {
   font-style: normal;
   line-height: 90%;
   font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 200px;
 }
 
 .visually-hidden {
@@ -217,7 +219,7 @@ ol {
   border-bottom: 1px solid currentColor;
   border-right: none;
   border-left: none;
-  inline-size: 225px;
+  min-inline-size: 225px;
   padding: 2px 0;
   appearance: none;
 }
@@ -257,7 +259,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 
 .button {
   display: flex;
-  height: 34px;
+  min-height: 34px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -275,7 +277,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 
 .search-form__submit-button {
   align-self: flex-end;
-  inline-size: 194px;
+  min-inline-size: 194px;
 }
 
 .button:focus {
@@ -317,7 +319,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 }
 
 .more-button {
-  width: 399px;
+  min-width: 399px;
 }
 
 
